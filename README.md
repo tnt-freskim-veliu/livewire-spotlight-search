@@ -14,9 +14,9 @@ composer require tnt-freskim-veliu/livewire-spotlight-search
 
 This package uses `livewire/livewire` (https://laravel-livewire.com/) under the hood.
 
-It also uses TailwindCSS (https://tailwindcss.com/) for base styling, and Alpine JS for reactivity.
+It also uses TailwindCSS (https://tailwindcss.com/) for base styling, and Alpine JS (https://alpinejs.dev/) for reactivity.
 
-Please make sure you include both of those dependencies before using this component.
+Please make sure you include all of them dependencies before using this component.
 
 ## Usage
 
