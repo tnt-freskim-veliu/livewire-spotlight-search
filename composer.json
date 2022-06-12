@@ -3,7 +3,9 @@
     "description": "Laravel Livewire spotlight search component",
     "keywords": [
         "freskim-veliu",
-        "livewire-spotlight-search"
+        "livewire-spotlight-search",
+        "livewire",
+        "search"
     ],
     "license": "MIT",
     "type": "library",
