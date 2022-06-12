@@ -34,7 +34,7 @@ class SpotlightSearch extends Component
 
         $results = [];
 
-        foreach (config("spotlight-search.{$this->searchable}") as $searchable) {
+        foreach ((config("spotlight-search.{$this->searchable}") ?? []) as $searchable) {
             $class = new $searchable();
 
             $groupData = [

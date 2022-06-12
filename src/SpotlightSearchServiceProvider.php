@@ -14,12 +14,12 @@ class SpotlightSearchServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/spotlight-search.php' => config_path('spotlight-search.php'),
-        ], 'spotlight-search-config');
+            __DIR__ . '/../config/spotlight-search.php' => config_path('livewire-spotlight-search.php'),
+        ], 'livewire-spotlight-search-config');
 
         $this->publishes([
-            __DIR__ . '/../resources/views' => public_path('vendor/spotlight-search'),
-        ], 'spotlight-search-views');
+            __DIR__ . '/../resources/views' => public_path('vendor/livewire-spotlight-search'),
+        ], 'livewire-spotlight-search-views');
 
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'spotlight-search');
 
@@ -30,7 +30,7 @@ class SpotlightSearchServiceProvider extends ServiceProvider
 
     protected function registerBladeDirective()
     {
-        Blade::directive('spotlightSearchScripts', function () {
+        Blade::directive('livewireSpotlightSearchScript', function () {
             return <<<'HTML'
             <script>
                 window.spotlightSearch = (config) => {
