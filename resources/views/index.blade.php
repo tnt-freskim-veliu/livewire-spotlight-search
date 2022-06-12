@@ -30,7 +30,11 @@
              x-transition:leave="ease-in duration-150"
              x-transition:leave-start="opacity-100 scale-100"
              x-transition:leave-end="opacity-0 scale-95"
-             class="relative bg-white rounded-lg overflow-hidden shadow-xl transform transition-all max-w-xl w-full">
+             @class([
+                    'relative rounded-lg overflow-hidden shadow-xl transform transition-all max-w-xl w-full',
+                    'bg-white' => !$onDarkMode,
+                    'bg-gray-900' => $onDarkMode,
+            ])>
 
             <div class="relative">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
@@ -44,7 +48,11 @@
                     x-ref="input"
                     x-model.debounce.{{ $inputDebounce }}="input"
                     :placeholder="inputPlaceholder" type="text"
-                    class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-gray-800 placeholder-gray-400 focus:ring-0 sm:text-sm"/>
+                    @class([
+                        'h-12 w-full border-0 bg-transparent pl-11 pr-4 focus:ring-0 sm:text-sm',
+                        'text-gray-800 placeholder-gray-400' => !$onDarkMode,
+                        'text-white placeholder-gray-100' => $onDarkMode
+                     ])/>
             </div>
 
             <ul
@@ -58,7 +66,7 @@
                             @include($groupView)
                         </template>
 
-                        <ul class="text-sm text-gray-800" role="none">
+                        <ul role="none">
                             <template x-for="item in result.items">
                                 @include($itemView)
                             </template>

@@ -20,6 +20,12 @@ class SpotlightSearch extends Component
     public string $initialView = 'spotlight-search::initial';
     public string $itemView = 'spotlight-search::item';
     public string $groupView = 'spotlight-search::group';
+    public bool $onDarkMode = true;
+
+    public string $noResultsTitle = " No results found";
+    public string $noResultsDescription = "We couldn’t find anything with that term. Please try again.";
+    public string $initialTitle = 'Search for clients and projects';
+    public string $initialDescription = 'Quickly access clients and projects by running a global search.';
 
     public function render()
     {
