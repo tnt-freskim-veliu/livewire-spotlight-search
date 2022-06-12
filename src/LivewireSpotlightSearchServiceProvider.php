@@ -1,12 +1,12 @@
 <?php
 
-namespace FreskimVeliu\SpotlightSearch;
+namespace FreskimVeliu\LivewireSpotlightSearch;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 
-class SpotlightSearchServiceProvider extends ServiceProvider
+class LivewireSpotlightSearchServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
