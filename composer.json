@@ -1,0 +1,32 @@
+{
+    "name": "freskim-veliu/spotlight-search",
+    "description": "Laravel Livewire spotlight search component",
+    "keywords": [
+        "freskim-veliu",
+        "livewire-spotlight-search"
+    ],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Freskim Veliu",
+            "email": "freskim.veliu@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "FreskimVeliu\\SpotlightSearch\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FreskimVeliu\\SpotlightSearch\\SpotlightSearchServiceProvider"
+            ]
+        }
+    }
+}
