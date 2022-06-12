@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "FreskimVeliu\\SpotlightSearch\\SpotlightSearchServiceProvider"
+                "FreskimVeliu\\LivewireSpotlightSearch\\LivewireSpotlightSearchServiceProvider"
             ]
         }
     }
