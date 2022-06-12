@@ -14,7 +14,7 @@ composer require tnt-freskim-veliu/livewire-spotlight-search
 
 This package uses `livewire/livewire` (https://laravel-livewire.com/) under the hood.
 
-It also uses TailwindCSS (https://tailwindcss.com/) for base styling.
+It also uses TailwindCSS (https://tailwindcss.com/) for base styling, and Alpine JS for reactivity.
 
 Please make sure you include both of those dependencies before using this component.
 
@@ -31,7 +31,7 @@ php artisan vendor:publish --tag=livewire-spotlight-search-config
 ```
 in the config you have to fill searchable key with classes that implements ``Searchable`` contract.
 
-Example you can declare the UserSearch class that will handle the query.
+Example you can declare the UserSearch class that will handle the search.
 ``` php
 return [
     'searchable' => 'App\SpotlightSearch\UserSearch'
@@ -68,8 +68,14 @@ The search modal can be open in many ways:
 ``Cmd+k``
 ``Cmd+/`` or by dispatching a browser event with name `open-spotlight`.
 
-Please don't forget change `tailwind.config.js` content part, by adding:
-`./vendor/tnt-freskim-veliu/resources/views/*.blade.php'`.
+Please don't forget to change `tailwind.config.js` content part, by adding:
+`./vendor/tnt-freskim-veliu/resources/views/*.blade.php`, so tailwind will recognise the classes that we use.
+
+Currently we support the dark mode and light mode by passing:
+`:on-dark-mode="bool""`
+
+## TODO
+Add command that will create spotlight search classes
 
 ### Changelog
 
