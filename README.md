@@ -75,7 +75,8 @@ Currently we support the dark mode and light mode by passing:
 `:on-dark-mode="bool""`
 
 ## TODO
-Add command that will create spotlight search classes
+- Add functionality to navigate inside items with keyup and keydown.
+- Add command that will create spotlight search classes
 
 ### Changelog
 
