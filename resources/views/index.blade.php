@@ -55,15 +55,12 @@
 
                     <li>
                         <template x-if="shouldGroup">
-                            <h2 class="sticky top-0 z-10 bg-gray-100 py-2.5 px-4 text-xs font-semibold text-gray-900"
-                                role="none">
-                                <span x-text="result.group"></span>
-                            </h2>
+                            @include($groupView)
                         </template>
 
                         <ul class="text-sm text-gray-800" role="none">
                             <template x-for="item in result.items">
-                                @include('spotlight-search::item')
+                                @include($itemView)
                             </template>
                         </ul>
                     </li>
@@ -71,11 +68,11 @@
                 </template>
 
                 <template x-if="filteredItems().length == 0 && input.length > 0">
-                    @include('spotlight-search::no-results')
+                    @include($noResultsView)
                 </template>
 
                 <template x-if="input.length == 0 && showInitialView">
-                    @include('spotlight-search::initial')
+                    @include($initialView)
                 </template>
             </ul>
         </div>

@@ -17,6 +17,9 @@ class SpotlightSearch extends Component
     public string $noResultsView = 'spotlight-search::no-results';
     public bool $showNoResultsView = true;
     public bool $showInitialView = false;
+    public string $initialView = 'spotlight-search::initial';
+    public string $itemView = 'spotlight-search::item';
+    public string $groupView = 'spotlight-search::group';
 
     public function render()
     {
