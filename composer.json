@@ -21,13 +21,13 @@
     },
     "autoload": {
         "psr-4": {
-            "FreskimVeliu\\SpotlightSearch\\": "src"
+            "TntFreskimVeliu\\LivewireSpotlightSearch\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "FreskimVeliu\\LivewireSpotlightSearch\\LivewireSpotlightSearchServiceProvider"
+                "TntFreskimVeliu\\LivewireSpotlightSearch\\LivewireSpotlightSearchServiceProvider"
             ]
         }
     }

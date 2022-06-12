@@ -1,6 +1,6 @@
 <?php
 
-namespace FreskimVeliu\LivewireSpotlightSearch;
+namespace TntFreskimVeliu\LivewireSpotlightSearch;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;

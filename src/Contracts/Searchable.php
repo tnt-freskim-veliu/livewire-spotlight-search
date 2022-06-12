@@ -1,6 +1,6 @@
 <?php
 
-namespace FreskimVeliu\LivewireSpotlightSearch\Contracts;
+namespace TntFreskimVeliu\LivewireSpotlightSearch\Contracts;
 
 use Livewire\Component;
 
