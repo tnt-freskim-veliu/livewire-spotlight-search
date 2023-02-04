@@ -3,6 +3,7 @@
 namespace TntFreskimVeliu\LivewireSpotlightSearch;
 
 use Livewire\Component;
+use TntFreskimVeliu\LivewireSpotlightSearch\Contracts\Transformable;
 
 class SpotlightSearch extends Component
 {
@@ -23,7 +24,7 @@ class SpotlightSearch extends Component
     public bool $onDarkMode = true;
 
     public string $noResultsTitle = " No results found";
-    public string $noResultsDescription = "We couldn’t find anything with that term. Please try again.";
+    public string $noResultsDescription = "We could’t find anything with that term. Please try again.";
     public string $initialTitle = 'Search for clients and projects';
     public string $initialDescription = 'Quickly access clients and projects by running a global search.';
 
@@ -49,7 +50,19 @@ class SpotlightSearch extends Component
             $groupData = [
                 'class' => $searchable,
                 'group' => $class->group(),
-                'items' => $class->search($query),
+                'items' => $class->builder($query)
+                    ->get()
+                    ->transform(function ($item) use ($class) {
+                        if ($class instanceof Transformable) {
+                            return $class->item($item);
+                        }
+
+                        return [
+                            'id' => $item->id,
+                            'name' => $item->name
+                        ];
+                    })
+                    ->toArray()
             ];
 
             if (filled($groupData['items'])) {
