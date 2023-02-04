@@ -9,7 +9,7 @@
          @keydown.window.prevent.ctrl.slash="toggleOpen()"
          @keydown.window.escape="isOpen = false"
          @toggle-spotlight.window="toggleOpen()"
-         class="fixed z-50 px-4 pt-16 flex items-start justify-center inset-0 sm:pt-24">
+         class="fixed z-50 px-4 pt-16 flex items-start justify-center inset-0 sm:pt-24" style="display: none">
 
         <div x-show="isOpen"
              x-transition:enter="ease-out duration-200"
@@ -30,11 +30,11 @@
              x-transition:leave="ease-in duration-150"
              x-transition:leave-start="opacity-100 scale-100"
              x-transition:leave-end="opacity-0 scale-95"
-             @class([
-                    'relative rounded-lg overflow-hidden shadow-xl transform transition-all max-w-xl w-full',
-                    'bg-white' => !$onDarkMode,
-                    'bg-gray-900' => $onDarkMode,
-            ])>
+            @class([
+                   'relative rounded-lg overflow-hidden shadow-xl transform transition-all max-w-xl w-full',
+                   'bg-white' => !$onDarkMode,
+                   'bg-gray-900' => $onDarkMode,
+           ])>
 
             <div class="relative">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
